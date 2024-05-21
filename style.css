@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FBFFB9, #c65b42);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dcdcdc;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: #000;
+}
+
+
+.row button {
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #E1CE7A;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.row button:hover {
+    transition: 0.2s;
+    background-color: #ccbb6d;
+}
+
+.todo-app ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo-app ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 505;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.todo-app ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.todo-app ul li.checked::before {
+    color: #555;
+    text-decoration: line-through;
+    background-image: url('images/checked.png');
+}
+
+.todo-app ul li span {
+    transition: 0.3s;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #777;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.todo-app ul li span:hover {
+    transition: 0.3s;
+    background-color: #e4e4e4;
+}
+
+.todo-app ul li span:active {
+    background-color: #f2f2f2;
+}
